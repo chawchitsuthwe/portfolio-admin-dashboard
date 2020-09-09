@@ -1,13 +1,40 @@
 import React from 'react';
 
-import { Grid } from '@material-ui/core';
+import { Grid, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+import CardComponent from './CardComponent';
+
+const useStyles = makeStyles({
+  root: {
+  	marginTop: '8px'
+  },
+});
 
 const ProjectsPage = () => {
+	const classes = useStyles();
+
 	return (
 		<div>
 			<Grid container>
-				<Grid item xs="12">
-
+				<Grid item>
+					<Button variant="contained" color="primary" href="#contained-buttons">
+				    	New Project
+				    </Button>
+				</Grid>
+			</Grid>
+			<Grid container spacing={1} className={classes.root}>
+				<Grid item xs={12} sm={6} md={4} lg={3}>
+					<CardComponent />
+				</Grid>
+				<Grid item xs={12} sm={6} md={4} lg={3}>
+					<CardComponent />
+				</Grid>
+				<Grid item xs={12} sm={6} md={4} lg={3}>
+					<CardComponent />
+				</Grid>
+				<Grid item xs={12} sm={6} md={4} lg={3}>
+					<CardComponent />
 				</Grid>
 			</Grid>
 		</div>

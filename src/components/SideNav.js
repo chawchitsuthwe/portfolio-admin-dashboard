@@ -125,8 +125,8 @@ const SideNav = () => {
 	          </IconButton>
 	      
 	          <Grid container justify="space-between">  
-				<Typography inline variant="h6" align="left">Dashboard</Typography>
-				<Typography inline variant="h6" align="right">{moment().format('ll')}</Typography>
+				<Typography variant="h6" align="left">Dashboard</Typography>
+				<Typography variant="h6" align="right">{moment().format('ll')}</Typography>
 			  </Grid>
 	        </Toolbar>
 	      </AppBar>
