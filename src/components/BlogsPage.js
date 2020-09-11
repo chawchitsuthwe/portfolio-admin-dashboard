@@ -12,16 +12,16 @@ const useStyles = makeStyles({
   },
 });
 
-const ProjectsPage = () => {
+const BlogsPage = () => {
 	const classes = useStyles();
 
 	return (
 		<div>
 			<Grid container>
 				<Grid item>
-					<Link to="/newproject">
+					<Link to="/newblog">
 						<Button variant="contained" color="primary" href="#contained-buttons">
-					    	New Project
+					    	New Blog
 					    </Button>
 					</Link>
 				</Grid>
@@ -44,4 +44,4 @@ const ProjectsPage = () => {
 	)
 }
 
-export default ProjectsPage;
+export default BlogsPage;

@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import clsx from 'clsx';
+import {Link} from 'react-router-dom';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -21,8 +22,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import WorkIcon from '@material-ui/icons/Work';
 import BookIcon from '@material-ui/icons/Book';
 import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
-
-import ProjectsPage from './ProjectsPage';
 
 const drawerWidth = 240;
 
@@ -151,18 +150,23 @@ const SideNav = () => {
 	        </div>
 	        <Divider />
 	        <List>
-	          <ListItem button>
-	              <ListItemIcon>
-	              	<WorkIcon />
-	              </ListItemIcon>
-	              <ListItemText primary="Projects" />
-	          </ListItem>
-	          <ListItem button>
-	              <ListItemIcon>
-	              	<BookIcon />
-	              </ListItemIcon>
-	              <ListItemText primary="Blogs" />
-	          </ListItem>
+	        	<Link to="/projects">
+	        		<ListItem button>
+		              	<ListItemIcon>
+		              		<WorkIcon />
+		              	</ListItemIcon>
+		              	<ListItemText primary="Projects" />
+		          	</ListItem>
+	        	</Link>
+	          	
+	        	<Link to="/blogs">
+	        		<ListItem button>
+		              	<ListItemIcon>
+		              		<BookIcon />
+		              	</ListItemIcon>
+		              	<ListItemText primary="Blogs" />
+		          	</ListItem>
+	        	</Link>
 	          <ListItem button>
 	              <ListItemIcon>
 	              	<OpenInBrowserIcon style={{color: "#C1765A"}}/>
@@ -171,10 +175,6 @@ const SideNav = () => {
 	          </ListItem>
 	        </List>
 	      </Drawer>
-	      <main className={classes.content}>
-	        <div className={classes.toolbar} />
-	        <ProjectsPage />
-	      </main>
 	    </div>
 	)
 }
