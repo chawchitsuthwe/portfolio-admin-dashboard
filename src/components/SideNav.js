@@ -86,6 +86,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+	link: {
+		textDecoration: "none",
+		color: "#000"
+	}
 }));
 
 const SideNav = () => {
@@ -150,7 +154,7 @@ const SideNav = () => {
 	        </div>
 	        <Divider />
 	        <List>
-	        	<Link to="/projects">
+	        	<Link to="/projects" className={classes.link}>
 	        		<ListItem button>
 		              	<ListItemIcon>
 		              		<WorkIcon />
@@ -159,7 +163,7 @@ const SideNav = () => {
 		          	</ListItem>
 	        	</Link>
 	          	
-	        	<Link to="/blogs">
+	        	<Link to="/blogs" className={classes.link}>
 	        		<ListItem button>
 		              	<ListItemIcon>
 		              		<BookIcon />

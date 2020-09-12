@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
 import TextField from '@material-ui/core/TextField';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
@@ -31,7 +30,15 @@ const useStyles = makeStyles(() => ({
 	button: {
 		padding: "10px",
 		marginTop: "5px"
-	}
+	},
+	link: {
+		textDecoration: "none",
+		color: "#868e96",
+		'&:hover': {
+	       textDecoration: "underline"
+	    },
+	},
+
 }));
 
 const BlogForm = () => {
@@ -50,8 +57,8 @@ const BlogForm = () => {
 	return (
 		<div>
 			<Breadcrumbs aria-label="breadcrumb">
-		      <Link color="inherit" href="/blogs">
-		        Blogs
+		      <Link to="/blogs" className={classes.link}>
+		      	<Typography>Blogs</Typography>
 		      </Link>
 		      <Typography color="textPrimary">New Blog</Typography>
 		    </Breadcrumbs>

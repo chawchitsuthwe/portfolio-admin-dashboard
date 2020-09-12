@@ -1,11 +1,11 @@
-import React, { useState, forwardRef } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
 import TextField from '@material-ui/core/TextField';
 // import MaterialTable from 'material-table';
 // import AddBox from '@material-ui/icons/AddBox';
@@ -61,7 +61,14 @@ const useStyles = makeStyles(() => ({
 	button: {
 		padding: "10px",
 		marginTop: "5px"
-	}
+	},
+	link: {
+		textDecoration: "none",
+		color: "#868e96",
+		'&:hover': {
+	       textDecoration: "underline"
+	    },
+	},
 }));
 
 const ProjectForm = () => {
@@ -82,7 +89,7 @@ const ProjectForm = () => {
 	return (
 		<div>
 			<Breadcrumbs aria-label="breadcrumb">
-		      <Link color="inherit" href="/projects">
+		      <Link to="/projects" className={classes.link}>
 		        Projects
 		      </Link>
 		      <Typography color="textPrimary">New Project</Typography>
