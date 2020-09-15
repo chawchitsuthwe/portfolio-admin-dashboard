@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: '#031424'
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -79,7 +78,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
   },
   content: {
@@ -173,7 +171,7 @@ const SideNav = () => {
 	        	</Link>
 	          <ListItem button>
 	              <ListItemIcon>
-	              	<OpenInBrowserIcon style={{color: "#C1765A"}}/>
+	              	<OpenInBrowserIcon color="secondary" />
 	              </ListItemIcon>
 	              <ListItemText primary="View Website" />
 	          </ListItem>

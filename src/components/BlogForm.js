@@ -117,7 +117,7 @@ const BlogForm = () => {
 			        className={classes.button}
 			        startIcon={<CloudUploadIcon />}
 			      >
-			        Upload
+			        Post
 			    </Button>
 		    </form>
 		</div>
