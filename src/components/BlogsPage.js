@@ -6,11 +6,11 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import CardComponent from './CardComponent';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles( theme => ({
   root: {
-  	marginTop: '8px'
+  	marginTop: theme.spacing(2),
   },
-});
+}));
 
 const BlogsPage = () => {
 	const classes = useStyles();
@@ -26,7 +26,10 @@ const BlogsPage = () => {
 					</Link>
 				</Grid>
 			</Grid>
-			<Grid container spacing={1} className={classes.root}>
+			<Grid container spacing={2} direction="row" justify="flex-start" className={classes.root}>
+				<Grid item xs={12} sm={6} md={4} lg={3}>
+					<CardComponent />
+				</Grid>
 				<Grid item xs={12} sm={6} md={4} lg={3}>
 					<CardComponent />
 				</Grid>

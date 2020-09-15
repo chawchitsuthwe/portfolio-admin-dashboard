@@ -13,12 +13,12 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
 	root: {
-		marginTop: "10px",
-		marginBottom: "8px",
+		marginTop: theme.spacing(3),
+		marginBottom: theme.spacing(3),
 		backgroundColor: "#FFF",
-		padding: "25px",
+		padding: theme.spacing(3),
 		boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.19)",
 		borderRadius: "5px"
 	},
@@ -28,8 +28,8 @@ const useStyles = makeStyles(() => ({
 		textAlign: "left"
 	},
 	button: {
-		padding: "10px",
-		marginTop: "5px"
+		padding: theme.spacing(1),
+		marginTop: theme.spacing(3)
 	},
 	link: {
 		textDecoration: "none",
