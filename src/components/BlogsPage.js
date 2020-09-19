@@ -20,7 +20,7 @@ const BlogsPage = () => {
 			<Grid container>
 				<Grid item>
 					<Link to="/newblog">
-						<Button variant="contained" color="primary" href="#contained-buttons">
+						<Button variant="contained" color="primary">
 					    	New Blog
 					    </Button>
 					</Link>

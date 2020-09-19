@@ -20,7 +20,7 @@ const ProjectsPage = () => {
 			<Grid container>
 				<Grid item>
 					<Link to="/newproject">
-						<Button variant="contained" color="primary" href="#contained-buttons">
+						<Button variant="contained" color="primary">
 					    	New Project
 					    </Button>
 					</Link>
